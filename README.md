@@ -1,4 +1,4 @@
-# Questioner
+# Questioner [![Build Status](https://travis-ci.org/wptechprodigy/Questioner.svg?branch=master)](https://travis-ci.org/wptechprodigy/Questioner)
 
 ## Project Overview
 <p>Crowd-source questions for a meetup.</p> 
