@@ -4,7 +4,7 @@
   "description": "Crowd-source questions for meetups.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d UI"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/wptechprodigy/Questioner/issues"
   },
-  "homepage": "https://github.com/wptechprodigy/Questioner#readme"
+  "homepage": "https://wptechprodigy.github.io/Questioner",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }
