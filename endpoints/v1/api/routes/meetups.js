@@ -45,37 +45,37 @@ router.post('/', (req, res) => {
   });
 });
 
-// Get a single meetup
-router.get('/:meetupId', (req, res) => {
-  if (req.params.meetupId !== 'upcoming') {
-    const meetupId = parseInt(req.params.meetupId, 10);
-
-    db.map((meetup) => {
-      if (meetup.id === meetupId) {
-        return res.status(200).json({
-          status: 200,
-          message: 'Meetup retrieved successfully!',
-          meetup,
-        });
-      }
-    });
-
-    return res.status(404).json({
-      status: 404,
-      message: 'Meetup does not exist!',
-    });
-  } 
-  
+// Get upcoming meetups
+router.get('/upcoming', (req, res) => {
   const currentDate = new Date();
   const meetupDate = db.happeningOn;
 
   if (meetupDate > currentDate) {
-    return res.status(200).json({
+    res.status(200).json({
       status: 200,
       message: 'Upcoming meetups loaded successfully!',
     });
   }
-  
+});
+
+// Get a single meetup
+router.get('/:meetupId', (req, res) => {
+  const meetupId = parseInt(req.params.meetupId, 10);
+
+  db.map((meetup) => {
+    if (meetup.id === meetupId) {
+      return res.status(200).json({
+        status: 200,
+        message: 'Meetup retrieved successfully!',
+        meetup,
+      });
+    }
+  });
+
+  return res.status(404).json({
+    status: 404,
+    message: 'Meetup does not exist!',
+  });
 });
 
 // Delete a meetup
