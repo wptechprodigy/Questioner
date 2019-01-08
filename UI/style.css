@@ -212,6 +212,68 @@ header nav .menu-item li {
   margin-top: 10px;
 }
 
+/* Form styling */
+form {
+  margin: 0 auto;
+}
+
+.form-base {
+  width: 420px;
+  height: 440px;
+  margin: 60px auto;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fcf2cb;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+.form-base > h2 {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #192a56;
+}
+
+.form-base label {
+  flex: none;
+  display: inline-block;
+  width: 125px;
+  font-weight: 500;
+  font-size: 1em;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.form-base input {
+    padding: .5em;
+    margin-bottom: .5em;
+}
+
+.form-base button {
+  margin: 0px;
+}
+
+/* .form-base input:invalid {
+  border: 2px dashed red;
+}
+
+.form-base input:valid {
+  border: 2px solid #192a56;
+} */
+
+/* .form-base div:last-child {
+  margin: 10px auto;
+} */
+
+#reg-btn {
+  margin: 20px auto;
+  width: fit-content;
+}
+
 /* Footer */
 footer {
   background-color: #192a56;
