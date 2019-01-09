@@ -42,6 +42,9 @@ body {
 }
 
 /* Header */
+#first-letter {
+  color: #ff8926;
+}
 
 header {
   display: flex;
@@ -56,6 +59,7 @@ header nav {
   justify-content: space-between;
   align-items: center;
 }
+
 header nav .menu-item {
   display: flex;
   flex-direction: row;
@@ -84,8 +88,7 @@ header nav .menu-item li {
 /* Showcase */
 
 #showcase {
-  background: url(img/priscilla-du-preez-697316-unsplash.jpg) no-repeat center
-    center / cover;
+  background: url(img/priscilla-du-preez-697316-unsplash.jpg) no-repeat center center / cover;
   max-width: 100%;
   height: auto;
   padding: 100px 60px;
@@ -149,7 +152,7 @@ header nav .menu-item li {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.top-meetup > img {
+.top-meetup>img {
   flex: 2;
   width: 20%;
   height: 250px;
@@ -219,9 +222,8 @@ form {
 
 .form-base {
   width: 420px;
-  height: 440px;
+  height: fit-content;
   margin: 60px auto;
-  padding: 20px 10px;
   display: flex;
   justify-content: center;
   padding-top: 10px;
@@ -233,8 +235,10 @@ form {
   border-radius: 5px;
 }
 
-.form-base > h2 {
+.form-base>h2 {
   margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
   border-bottom: 2px solid #192a56;
 }
 
@@ -249,8 +253,8 @@ form {
 }
 
 .form-base input {
-    padding: .5em;
-    margin-bottom: .5em;
+  padding: .5em;
+  margin-bottom: .5em;
 }
 
 .form-base button {
@@ -358,7 +362,7 @@ footer {
     margin-bottom: 20px;
   }
 
-  .top-meetup > img {
+  .top-meetup>img {
     flex: 1;
     width: 100%;
     margin-right: 20px;
@@ -387,9 +391,7 @@ footer {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-}
+@media only screen and (min-width: 768px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-}
+@media only screen and (min-width: 992px) {}
