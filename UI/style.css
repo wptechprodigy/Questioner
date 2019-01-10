@@ -9,6 +9,7 @@
 
 a {
   text-decoration: none;
+
 }
 
 li {
@@ -21,15 +22,25 @@ body {
   overflow-x: hidden;
 }
 
+hr {
+  border-bottom: 2px solid #ff8926;
+  width: 80%;
+  margin: 30px auto;
+}
+
+.padding-top-bottom {
+  padding-top: 40px;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
   /* overflow: hidden; */
 }
 
-.container a:first-child {
+.create-menu {
   border: 1px solid #ff8926;
-  color: #fff;
+  color: #192a56;
   padding: 10px 20px;
   margin: 20px;
   border-radius: 5px;
@@ -39,10 +50,11 @@ body {
   transition: all ease-in-out .5s;
 }
 
-.container a:first-child:hover {
+.create-menu:hover {
   border: 1px solid #ff8926;
-
-  transform: background-color;
+  color: #fff;
+  font-weight: 500;
+  background-color: #ff8926;
 }
 
 .button {
@@ -233,8 +245,8 @@ header nav .menu-item li {
   opacity: 0.7;
   height: auto;
   margin-left: 10px;
-  transition: all;
   -moz-transition: all;
+  transition: all;
 }
 
 /* .thumbnail-sm:hover {
@@ -256,6 +268,7 @@ header nav .menu-item li {
   height: 100px;
   border-radius: 5px;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .top-question-description p {
@@ -340,13 +353,71 @@ form {
   font-size: 1rem;
 }
 
+/* Admin Page */
+.meetup-description {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+.meetup-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.padding-left-right {
+  padding: 0 10px;
+}
+
+.meetup-card p {
+  margin: 10px;
+}
+
+.meetup-card p:last-child {
+  margin: 0;
+}
+
+.meetup-title {
+  color: #192a56;
+  font-size: 1.2em;
+}
+
+.meetup-card p button {
+  border: none;
+  margin-top: 10px;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #ff8926;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.meetup-card a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.meetup-card button:hover,
+.meetup-card a:hover {
+  opacity: 0.7;
+}
+
 /* Admin create form */
 
-input[type=text],
-input[type=date],
-input[type=file],
-select,
-textarea {
+#create-meetup-form input[type=text],
+#create-meetup-form input[type=date],
+#create-meetup-form input[type=file],
+#create-meetup-form select,
+#create-meetup-form textarea {
   width: 100%;
   /* Full width */
   padding: 12px;
@@ -372,6 +443,10 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
@@ -402,12 +477,6 @@ input[type=submit]:hover {
 .specific-meetup-description h3 {
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-.specific-meetup hr {
-  border-bottom: 2px solid #ff8926;
-  width: 80%;
-  margin: 40px auto;
 }
 
 .specific-meetup-description p {
