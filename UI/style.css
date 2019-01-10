@@ -338,6 +338,16 @@ form {
   width: fit-content;
 }
 
+#demo {
+  margin: 10px auto;
+  color: #192a56;
+  background-color: #fcf2cb;
+  padding: 10px;
+  height: 50px;
+  width: 300px;
+  display: none;
+}
+
 .action-successful {
   background-color: #363e53;
   height: 50px;

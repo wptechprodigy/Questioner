@@ -25,31 +25,32 @@
 
   <main>
     <div class="container">
+      <p id="demo"></p>
       <div class="form-base">
         <h2>Register</h2>
-        <form action="" method="post">
+        <form action="" id="register-form">
           <div>
             <label for="firstName">First Name:</label>
-            <input type="text" name="firstName" id="" required>
+            <input type="text" name="firstName" id="first-name" placeholder="Fisrt name..." required>
           </div>
           <div>
             <label for="lastName">Last Name:</label>
-            <input type="text" name="lastName" id="" required>
+            <input type="text" name="lastName" id="last-name" placeholder="Last name..." required>
           </div>
           <div>
             <label for="email">Email:</label>
-            <input type="email" name="email" id="" required>
+            <input type="email" name="email" id="email" placeholder="Your email..." required>
           </div>
           <div>
             <label for="password">Password:</label>
-            <input type="password" name="password" id="" required>
+            <input type="password" name="password" id="password" placeholder="Password" required>
           </div>
           <div>
-            <label for="password">Confirm Password:</label>
-            <input type="password" name="password" id="" required>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" name="confirmPassword" id="confirm-password" placeholder="Confirm password" required>
           </div>
           <div id="reg-btn">
-            <button href="#" class="button" type="submit">Register!</button>
+            <button href="#" class="button" type="submit" onsubmit="registerUser()">Register!</button>
           </div>
         </form>
         <p>Already Registered? <a href="login.html">Login</a></p>
@@ -63,6 +64,36 @@
       </p>
     </div>
   </footer>
+
+  <script>
+    // window.addEventListener("load", () => {
+    //   document.getElementById('register-form').addEventListener("submit", (event) => {
+    //     event.preventDefault(); // before the code
+    //     /* do what you want with the form */
+
+    //     // Should be triggered on form submit
+    //     window.open('http://127.0.0.1:5500/UI/register.html');
+    //   });
+    // });
+
+    function registerUser() {
+      let firstName = document.querySelector("first-name").value;
+      let lastName = document.querySelector("last-name").value;
+      let email = document.querySelector("email").value
+      let password = document.querySelector("password").value;
+      let confirmPassword = document.querySelector("confirm-password").value;
+      let text;
+
+      // If firstName is Not 
+      if (!firstName || !lastName || !email || password !== confirmPassword) {
+        text = "Check the provided details again, registration not successful!";
+      } else {
+        text = "Registration successful!";
+      }
+
+      document.querySelector("#demo").innerHTML = text;
+    }
+  </script>
 </body>
 
 </html>
