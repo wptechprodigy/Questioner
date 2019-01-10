@@ -16,7 +16,7 @@
         <a href="index.html" class="header-brand"><span id="first-letter">Q</span>uestioner</a>
         <ul class="menu-item">
           <li><a href="meetups.html" class="menu-link">Meetups</a></li>
-          <li><a href="admin-logout.html" class="menu-link">Logout</a></li>
+          <li><a href="admin-login.html" class="menu-link">Login</a></li>
         </ul>
       </nav>
     </div>
@@ -24,7 +24,22 @@
 
   <main>
     <div class="container">
-      <a href="create-meetup.html">Create New Meetup</a>
+      <div class="form-base">
+        <h2>Admin Login</h2>
+        <form action="" method="post">
+          <div>
+            <label for="Username">Username:</label>
+            <input type="text" name="Username" id="" required>
+          </div>
+          <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="" required>
+          </div>
+          <div id="reg-btn">
+            <button href="#" class="button" type="submit">Login</button>
+          </div>
+        </form>
+      </div>
     </div>
   </main>
   <footer>
