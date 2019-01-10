@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Questioner - Register</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="header-brand"><span id="first-letter">Q</span>uestioner</a>
+        <ul class="menu-item">
+          <li><a href="meetups.html" class="menu-link">Meetups</a></li>
+          <li><a href="register.html" class="menu-link">Register</a></li>
+          <li><a href="login.html" class="menu-link">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <p id="demo"></p>
+      <div class="form-base">
+        <h2>Register</h2>
+        <form action="" id="register-form">
+          <div>
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" id="first-name" placeholder="Fisrt name..." required>
+          </div>
+          <div>
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" id="last-name" placeholder="Last name..." required>
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Your email..." required>
+          </div>
+          <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+          </div>
+          <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" name="confirmPassword" id="confirm-password" placeholder="Confirm password" required>
+          </div>
+          <div id="reg-btn">
+            <button href="#" class="button" type="submit" onsubmit="registerUser()">Register!</button>
+          </div>
+        </form>
+        <p>Already Registered? <a href="login.html">Login</a></p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p class="copyright">
+        Copyright &copy; 2018 Questioner. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // window.addEventListener("load", () => {
+    //   document.getElementById('register-form').addEventListener("submit", (event) => {
+    //     event.preventDefault(); // before the code
+    //     /* do what you want with the form */
+
+    //     // Should be triggered on form submit
+    //     window.open('http://127.0.0.1:5500/UI/register.html');
+    //   });
+    // });
+
+    function registerUser() {
+      let firstName = document.querySelector("first-name").value;
+      let lastName = document.querySelector("last-name").value;
+      let email = document.querySelector("email").value
+      let password = document.querySelector("password").value;
+      let confirmPassword = document.querySelector("confirm-password").value;
+      let text;
+
+      // If firstName is Not 
+      if (!firstName || !lastName || !email || password !== confirmPassword) {
+        text = "Check the provided details again, registration not successful!";
+      } else {
+        text = "Registration successful!";
+      }
+
+      document.querySelector("#demo").innerHTML = text;
+    }
+  </script>
+</body>
+
+</html>
