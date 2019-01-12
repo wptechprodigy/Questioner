@@ -53,7 +53,7 @@ class Meetup {
    */
   update(id, data) {
     const meetup = this.findOne(id);
-    const index = this.meetup.indexOf(meetup);
+    const index = this.meetups.indexOf(meetup);
     this.meetups[index].topic = data['topic'] || meetup.topic;
     this.meetups[index].createdOn = moment.now();
     this.meetups[index].location = data['location'] || meetup.location;
