@@ -9,6 +9,7 @@ class Meetup {
   constructor() {
     this.meetups = [];
   }
+
   /**
    * 
    * @returns {object} meetup object
@@ -17,15 +18,18 @@ class Meetup {
     const newMeetup = {
       id: uuid.v4(),
       topic: data.topic || '',
+      createdOn: moment.now(),
       location: data.location || '',
       description: data.description || '',
       happeningOn: moment.now(),
-      tags: data.tags || ''
+      tags: data.tags || '',
+      modifiedOn: moment.now(),
     };
 
     this.meetups.push(newMeetup);
     return newMeetup
   }
+
   /**
    * 
    * @param {uuid} id
@@ -34,12 +38,14 @@ class Meetup {
   findOne(id) {
     return this.meetups.find(meetup => meetup.id === id);
   }
+
   /**
-   * @returns {object} returns all reflections
+   * @returns {object} returns all meetups
    */
   findAll() {
     return this.meetups;
   }
+
   /**
    * 
    * @param {uuid} id
@@ -48,13 +54,16 @@ class Meetup {
   update(id, data) {
     const meetup = this.findOne(id);
     const index = this.meetup.indexOf(meetup);
-    this.meetups[index].topic = data['topic'] || meetup.success;
+    this.meetups[index].topic = data['topic'] || meetup.topic;
+    this.meetups[index].createdOn = moment.now();
     this.meetups[index].location = data['location'] || meetup.location;
     this.meetups[index].description = data['description'] || meetup.description;
     this.meetups[index].happeningOn = moment.now();
     this.meetups[index].tags = data['tags'] || meetup.tags;
+    this.meetups[index].modifiedOn = moment.now();
     return this.meetups[index];
   }
+
   /**
    * 
    * @param {uuid} id 
