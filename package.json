@@ -6,7 +6,9 @@
   "scripts": {
     "start": "nodemon --exec babel-node app.js",
     "test": "mocha --require @babel/register",
-    "deploy": "gh-pages -d UI"
+    "deploy": "gh-pages -d UI",
+    "dev-start": "babel-watch app.js",
+    "build": "babel app.js --out-dir build"
   },
   "repository": {
     "type": "git",
@@ -25,13 +27,15 @@
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
+    "babel-watch": "^2.0.8",
     "chai": "^4.2.0",
-    "gh-pages": "^2.0.1",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.9"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "moment": "^2.23.0",
+    "uuid": "^3.3.2"
   }
 }
