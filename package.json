@@ -36,6 +36,7 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "moment": "^2.23.0",
+    "supertest": "^3.3.0",
     "uuid": "^3.3.2"
   }
 }
