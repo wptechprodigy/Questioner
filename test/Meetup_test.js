@@ -1,6 +1,6 @@
 import {
   expect,
-  should,
+  should
 } from 'chai';
 import supertest from 'supertest';
 // import Meetup from '../server/models/Meetup';
